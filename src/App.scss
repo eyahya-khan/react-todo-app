@@ -1,5 +1,103 @@
-$myColor: red;
+@import "./colors";
 
-h1 {
-  color: $myColor;
+@mixin display {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $bgColor1;
+}
+
+.todo-app {
+  @include display;
+
+  width: 520px;
+  background-color: $bgColor2;
+  text-align: center;
+  margin: 90px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+  font-family: $fontFamily1;
+}
+
+h3 {
+  margin: 32px 10px;
+  color: $textColor;
+  font-size: 18px;
+}
+.todo-form {
+  margin-bottom: 32px;
+  font-family: $fontFamily;
+
+  input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid $borderColor;
+    outline: none;
+    width: 320px;
+    background: transparent;
+    color: $textColor;
+    font-family: $fontFamily;
+  }
+
+  &::placeholder {
+    color: $textColor;
+  }
+
+  button {
+    padding: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    background-color: $borderColor;
+    color: $textColor;
+
+    &:hover {
+      color: $bgColor2;
+      background-color: $hoverColor1;
+    }
+  }
+}
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: $textColor;
+  background-color: $bgColor3;
+  padding: 16px;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: $textColor;
+
+  &:hover {
+    color: $hoverColor;
+  }
+}
+
+.edit-icon {
+  color: $textColor;
+
+  &:hover {
+    color: $hoverColor1;
+  }
 }

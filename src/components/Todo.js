@@ -20,13 +20,8 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   if (edit.id) {
     return <TodoForm edit={edit} onSubmit={submitUpdate} />;
   }
-
   return todos.map((todo, index) => (
-    //change color of todo list
-    <div
-      className={todo.isComplete ? "todo-row complete" : "todo-row"}
-      key={index}
-    >
+    <div className="todo-row" key={index}>
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
         {todo.text}
       </div>
