@@ -32,7 +32,7 @@ h3 {
   color: $textColor;
   font-size: 18px;
 }
-.todo-form {
+.todo-appForm {
   margin-bottom: 32px;
   font-family: $fontFamily;
 
@@ -66,6 +66,7 @@ h3 {
     }
   }
 }
+
 .todo-row {
   display: flex;
   justify-content: space-between;

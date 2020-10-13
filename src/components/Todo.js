@@ -9,6 +9,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
     id: null,
     value: "",
   });
+
   // update the input value
   const submitUpdate = (value) => {
     updateTodo(edit.id, value);
@@ -17,6 +18,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
       value: "",
     });
   };
+
   if (edit.id) {
     return <TodoForm edit={edit} onSubmit={submitUpdate} />;
   }

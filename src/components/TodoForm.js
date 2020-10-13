@@ -6,8 +6,17 @@ function TodoForm(props) {
 
   //use to focus the input means when page load then curser will be in input box
   const inputRef = useRef(null);
+  // const inputRef1 = useRef(null);
   useEffect(() => {
     inputRef.current.focus();
+    // When text is in input box
+    if (input) {
+      document.title = "Adding todo";
+    }
+    // When click on update logo
+    if (props.edit) {
+      document.title = "Updating todo";
+    }
   });
 
   const handleChange = (e) => {
@@ -25,7 +34,7 @@ function TodoForm(props) {
     setInput("");
   };
   return (
-    <form className="todo-form" onSubmit={handleSubmit}>
+    <form className="todo-appForm" onSubmit={handleSubmit}>
       {/* props.edit ? is used to change the text: Add into update */}
       {props.edit ? (
         <>
@@ -34,11 +43,10 @@ function TodoForm(props) {
             placeholder="Update text here"
             value={input}
             name="text"
-            className="todo-input"
             onChange={handleChange}
             ref={inputRef}
           />
-          <button className="todo-button">Update</button>
+          <button>Update</button>
         </>
       ) : (
         <>
@@ -47,11 +55,10 @@ function TodoForm(props) {
             placeholder="Write your todo here"
             value={input}
             name="text"
-            className="todo-input"
             onChange={handleChange}
             ref={inputRef}
           />
-          <button className="todo-button">+</button>
+          <button>+</button>
         </>
       )}
     </form>
