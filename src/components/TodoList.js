@@ -39,7 +39,7 @@ function TodoList() {
     setTodos(updatedTodos);
   };
   return (
-    <div>
+    <div className="todoBackground">
       <h3>Todo App using REACT</h3>
       <TodoForm onSubmit={addTodo} />
       <Todo

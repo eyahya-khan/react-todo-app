@@ -3,7 +3,6 @@
 @mixin display {
   display: flex;
   flex-direction: column;
-  justify-content: start;
 }
 
 * {
@@ -18,7 +17,7 @@ body {
 .todo-app {
   @include display;
 
-  width: 520px;
+  width: 250px;
   background-color: $bgColor2;
   text-align: center;
   margin: 90px auto;
@@ -41,7 +40,6 @@ h3 {
     border-radius: 4px 0 0 4px;
     border: 2px solid $borderColor;
     outline: none;
-    width: 320px;
     background: transparent;
     color: $textColor;
     font-family: $fontFamily;
@@ -76,7 +74,6 @@ h3 {
   background-color: $bgColor3;
   padding: 16px;
   border-radius: 5px;
-  width: 80%;
 }
 
 .icons {
@@ -100,5 +97,29 @@ h3 {
 
   &:hover {
     color: $hoverColor1;
+  }
+}
+
+// /* Large devices (600px to 1200px) */
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+  .todo-app {
+    width: 450px;
+  }
+  .todo-appForm {
+    input {
+      width: 300px;
+    }
+  }
+}
+
+// /* Extra large devices (1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .todo-app {
+    width: 620px;
+  }
+  .todo-appForm {
+    input {
+      width: 420px;
+    }
   }
 }

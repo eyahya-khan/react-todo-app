@@ -12,8 +12,9 @@ function TodoForm(props) {
   useEffect(() => {
     if (counter) {
       document.title = "Added todo";
+      console.log(document.title);
     }
-  });
+  }, [counter]);
 
   //use to focus the input means when page load then curser will be in input box
   const inputRef = useRef(null);
@@ -23,10 +24,12 @@ function TodoForm(props) {
     // When text is in input box
     if (input) {
       document.title = "Adding......";
+      console.log(document.title);
     }
     // When click on update logo
     if (props.edit) {
       document.title = "Updating.....";
+      console.log(document.title);
     }
   });
 
