@@ -17,7 +17,7 @@ body {
 .todo-app {
   @include display;
 
-  width: 250px;
+  width: 300px;
   background-color: $bgColor2;
   text-align: center;
   margin: 90px auto;
@@ -69,7 +69,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 4px auto;
+  margin: 5px 5px;
   color: $textColor;
   background-color: $bgColor3;
   padding: 16px;
@@ -105,6 +105,10 @@ h3 {
   .todo-app {
     width: 450px;
   }
+  .todo-row {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
   .todo-appForm {
     input {
       width: 300px;
@@ -117,6 +121,11 @@ h3 {
   .todo-app {
     width: 620px;
   }
+  .todo-row {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
   .todo-appForm {
     input {
       width: 420px;
